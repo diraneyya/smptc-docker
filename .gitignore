@@ -1,0 +1,9 @@
+# Mac/OSX
+.DS_Store
+
+# Windows
+desktop.ini
+Thumbs.db
+
+# Environments
+.env

@@ -1,0 +1,6 @@
+[Usage]
+
+smtpc send --host hostname --port port --body-type html \
+  --subject 'subject' --body '<b>HTML</b> body' \
+  --from sender@domain.net --to receiver@domain.net
+
