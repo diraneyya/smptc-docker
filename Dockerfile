@@ -1,11 +1,7 @@
-FROM debian:bullseye-slim
+ARG PYTHON_TAG=latest
+FROM python:$PYTHON_TAG
 
-RUN <<EOF
-apt update
-apt upgrade
-apt install -y python3 python3-pip
-python3 -m pip install smtpc
-EOF
-
+RUN python3 -m pip install smtpc
 ADD motd /etc
+RUN echo 'cat /etc/motd' >> ~/.bashrc
 CMD [ "/bin/bash" ]
